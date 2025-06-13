@@ -1,0 +1,25 @@
+export const validInputTypes = [
+  "text",
+  "tel",
+  "number",
+  "email",
+  "password",
+  "url",
+  "search",
+  "date",
+  "time",
+  "datetime-local",
+  "month",
+  "week",
+  "color",
+  "file",
+  "checkbox",
+  "radio",
+  "range",
+  "hidden",
+  "submit",
+  "reset",
+  "button",
+] as const;
+
+export type ValidInputType = (typeof validInputTypes)[number];
