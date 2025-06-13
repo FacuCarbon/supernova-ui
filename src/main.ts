@@ -1,5 +1,4 @@
 import "./index.css";
-import "./styles/flags.min.css";
 export { HeaderMobile } from "./components/header-mobile/Header-mobile";
 export { HeaderDesktop } from "./components/header-desktop/Header-desktop";
 export { Layout } from "./components/layout/Layout";

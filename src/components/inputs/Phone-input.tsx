@@ -1,4 +1,5 @@
 "use client";
+import "../../styles/flags.min.css";
 /**
  * Componente personalizado para el campo de teléfono.
  * @author @FacuCarbon https://github.com/FacuCarbon
@@ -31,6 +32,7 @@ import { twMerge } from "tailwind-merge";
 import { PhoneNumberProps } from "../../types/Inputs";
 
 export const PhoneInput = ({
+  containerClass,
   inputClass,
   nameInput,
   placeholderInput,
@@ -104,11 +106,16 @@ export const PhoneInput = ({
   }, []);
 
   return (
-    <div className="relative w-full max-w-sm transition-all duration-300">
+    <div
+      className={twMerge(
+        "relative w-full max-w-sm transition-all duration-300",
+        containerClass
+      )}
+    >
       {label !== undefined && (
         <label
           htmlFor={nameInput ?? "phone"}
-          className="block text-sm font-medium text-slate-700"
+          className="block text-sm font-medium "
         >
           {label} {requiredInput && <span className="text-red-500">*</span>}
         </label>
@@ -140,7 +147,7 @@ export const PhoneInput = ({
           {open && (
             <div
               className={twMerge(
-                "absolute z-10 left-0 top-[2.3rem] w-full max-h-64 bg-dark-light overflow-y-auto border shadow rounded",
+                "absolute z-10 left-0 top-[3.6rem] w-full max-h-64 bg-dark-light overflow-y-auto border border-t-0 shadow rounded",
                 containerDropdownClass
               )}
             >
@@ -157,9 +164,7 @@ export const PhoneInput = ({
                     className={`flag-icon flag-icon-${c.toLowerCase()}`}
                   ></span>
                   <span className="text-sm">{c.toUpperCase()}</span>
-                  <span className="text-xs text-slate-500">
-                    +{getCountryCallingCode(c)}
-                  </span>
+                  <span className="text-xs ">+{getCountryCallingCode(c)}</span>
                 </div>
               ))}
             </div>

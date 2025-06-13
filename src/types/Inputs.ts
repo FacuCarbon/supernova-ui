@@ -1,6 +1,8 @@
 import { CountryCode } from "libphonenumber-js";
 
 export type PhoneNumberProps = {
+  containerClass?: string;
+  //
   inputClass?: string;
   nameInput?: string;
   placeholderInput?: string;
