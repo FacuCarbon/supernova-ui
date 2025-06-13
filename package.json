@@ -1,12 +1,11 @@
 {
   "name": "supernova-ui",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "license": "MIT",
   "type": "module",
   "files": [
     "dist",
-    "styles",
-    "index.css"
+    "styles"
   ],
   "main": "./dist/supernova-ui.umd.cjs",
   "module": "./dist/supernova-ui.js",
